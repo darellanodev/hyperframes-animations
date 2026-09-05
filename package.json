@@ -1,9 +1,0 @@
-{
-  "name": "arm_display_left",
-  "private": true,
-  "version": "0.0.1",
-  "type": "module",
-  "devDependencies": {
-    "hyperframes": "^0.7.60"
-  }
-}
