@@ -25,30 +25,30 @@
       }
       #bar {
         position: absolute;
-        bottom: 40px;
-        left: 40px;
-        height: 80px;
+        bottom: 80px;
+        left: 80px;
+        height: 160px;
         display: flex;
         align-items: center;
-        padding: 0 30px 0 22px;
+        padding: 0 60px 0 44px;
         background: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+        border-radius: 16px;
+        box-shadow: 0 8px 48px rgba(0, 0, 0, 0.18);
         white-space: nowrap;
       }
       #logo {
-        height: 50px;
-        width: 50px;
+        height: 100px;
+        width: 100px;
         object-fit: contain;
-        margin-right: 18px;
+        margin-right: 36px;
         transform-origin: center center;
       }
       #url {
         font-family: "Poppins", system-ui, "Segoe UI", sans-serif;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 48px;
         color: #333333;
-        letter-spacing: 0.2px;
+        letter-spacing: 0.4px;
       }
     </style>
   </head>
@@ -65,16 +65,16 @@
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
 
-      tl.fromTo("#bar", { x: -1280 }, { x: 0, duration: 1, ease: "power2.out" }, 0);
+      tl.fromTo("#bar", { x: -1600 }, { x: 0, duration: 1, ease: "power2.out" }, 0);
 
       tl.fromTo(
         "#logo",
-        { rotation: -4 },
+        { rotation: -8 },
         {
-          rotation: 4,
-          duration: 1.25,
+          rotation: 8,
+          duration: 0.625,
           ease: "sine.inOut",
-          repeat: 3,
+          repeat: 7,
           yoyo: true,
           immediateRender: false
         },
