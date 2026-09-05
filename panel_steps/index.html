@@ -104,8 +104,8 @@
     </style>
   </head>
   <body>
-    <div data-hf-id="hf-p001" id="root" data-composition-id="panel-steps" data-start="0" data-width="1920" data-height="1080" data-duration="18.6">
-      <div data-hf-id="hf-p002" id="card" class="clip" data-start="0" data-duration="18.6" data-track-index="0">
+    <div data-hf-id="hf-p001" id="root" data-composition-id="panel-steps" data-start="0" data-width="1920" data-height="1080" data-duration="34.6">
+      <div data-hf-id="hf-p002" id="card" class="clip" data-start="0" data-duration="34.6" data-track-index="0">
         <div data-hf-id="hf-p003" class="steps-row">
           <div data-hf-id="hf-p004" class="step">
             <div data-hf-id="hf-p005" id="circle-1" class="circle"><span data-hf-id="hf-p006" id="num-1">1</span></div>
@@ -130,42 +130,34 @@
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
-
-      const BLOCK = 6.2;
+      const BLOCK = 10.2;
+      const GAP = 2;
       const BLOCKS = 3;
-
       for (let k = 0; k < BLOCKS; k++) {
         const num = k + 1;
-        const s = k * BLOCK;
-
+        const s = k * (BLOCK + GAP);
         tl.set(["#desc-1", "#desc-2", "#desc-3"], { autoAlpha: 0 }, s);
         tl.set(`#desc-${num}`, { autoAlpha: 1 }, s);
-
         tl.set(["#circle-1", "#circle-2", "#circle-3"], { backgroundColor: "#ffffff", "--glow-alpha": 0 }, s);
         tl.set(["#num-1", "#num-2", "#num-3"], { color: "#666666" }, s);
         tl.set(["#label-1", "#label-2", "#label-3"], { color: "#333333" }, s);
-
         tl.set(`#circle-${num}`, { backgroundColor: "#1d6fd8" }, s);
         tl.set(`#num-${num}`, { color: "#ffffff" }, s);
         tl.set(`#label-${num}`, { color: "#1d6fd8" }, s);
-
         tl.fromTo(
           "#card",
           { opacity: 0 },
           { opacity: 1, duration: 0.6, ease: "power2.out", immediateRender: k === 0, overwrite: "auto" },
           s
         );
-
         tl.fromTo(
           `#circle-${num}`,
           { scale: 1, "--glow-alpha": 0 },
-          { scale: 1.12, "--glow-alpha": 0.35, duration: 0.5, ease: "sine.inOut", repeat: 9, yoyo: true, immediateRender: false },
+          { scale: 1.12, "--glow-alpha": 0.35, duration: 0.5, ease: "sine.inOut", repeat: 17, yoyo: true, immediateRender: false },
           s + 0.6
         );
-
-        tl.to("#card", { opacity: 0, duration: 0.6, ease: "power2.in", overwrite: "auto" }, s + 5.6);
+        tl.to("#card", { opacity: 0, duration: 0.6, ease: "power2.in", overwrite: "auto" }, s + 9.6);
       }
-
       window.__timelines["panel-steps"] = tl;
     </script>
   </body>
