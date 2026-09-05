@@ -89,8 +89,7 @@
       }
       #desc-2,
       #desc-3 {
-        opacity: 0;
-        visibility: hidden;
+        display: none;
       }
       #desc-1 code,
       #desc-2 code,
@@ -136,8 +135,8 @@
       for (let k = 0; k < BLOCKS; k++) {
         const num = k + 1;
         const s = k * (BLOCK + GAP);
-        tl.set(["#desc-1", "#desc-2", "#desc-3"], { autoAlpha: 0 }, s);
-        tl.set(`#desc-${num}`, { autoAlpha: 1 }, s);
+        tl.set(["#desc-1", "#desc-2", "#desc-3"], { autoAlpha: 0, display: "none" }, s);
+        tl.set(`#desc-${num}`, { autoAlpha: 1, display: "block" }, s);
         tl.set(["#circle-1", "#circle-2", "#circle-3"], { backgroundColor: "#ffffff", "--glow-alpha": 0 }, s);
         tl.set(["#num-1", "#num-2", "#num-3"], { color: "#666666" }, s);
         tl.set(["#label-1", "#label-2", "#label-3"], { color: "#333333" }, s);
