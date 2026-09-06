@@ -40,9 +40,9 @@
                 flex-direction: column;
                 align-items: center;
                 padding: 40px 60px 44px;
-                background: #ffffff;
+                background: #1c1c1e;
                 border-radius: 16px;
-                box-shadow: 0 12px 48px rgba(0, 0, 0, 0.16);
+                box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
                 font-family: "Poppins", system-ui, "Segoe UI", sans-serif;
                 white-space: nowrap;
             }
@@ -63,34 +63,34 @@
                 width: 120px;
                 height: 120px;
                 border-radius: 50%;
-                background: #ffffff;
-                border: 0.5px solid #d0d0d0;
+                background: #2c2c2e;
+                border: 0.5px solid #48484a;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: #666666;
+                color: #a0a0a5;
                 font-weight: 700;
                 font-size: 48px;
                 transform-origin: center center;
                 --glow-alpha: 0;
-                box-shadow: 0 0 44px 12px rgba(29, 111, 216, var(--glow-alpha));
+                box-shadow: 0 0 44px 12px rgba(64, 145, 235, var(--glow-alpha));
             }
             .label {
                 font-size: 30px;
                 font-weight: 600;
-                color: #333333;
+                color: #c7c7cc;
             }
             .connector {
                 width: 150px;
                 height: 2px;
-                background: #d0d0d0;
+                background: #48484a;
             }
             #desc-1,
             #desc-2,
             #desc-3 {
                 font-size: 32px;
                 font-weight: 700;
-                color: #000000;
+                color: #f2f2f2;
                 line-height: 1.6;
                 text-align: center;
                 margin: 0;
@@ -104,7 +104,8 @@
             #desc-3 code {
                 font-family: var(--font-mono);
                 font-size: 28px;
-                background: #f2f2f2;
+                background: #3a3a3c;
+                color: #f2f2f2;
                 padding: 2px 8px;
                 border-radius: 6px;
             }
@@ -198,18 +199,18 @@
                 tl.set(`#desc-${num}`, { autoAlpha: 1, display: "block" }, s);
                 tl.set(
                     ["#circle-1", "#circle-2", "#circle-3"],
-                    { backgroundColor: "#ffffff", "--glow-alpha": 0 },
+                    { backgroundColor: "#2c2c2e", "--glow-alpha": 0 },
                     s,
                 );
-                tl.set(["#num-1", "#num-2", "#num-3"], { color: "#666666" }, s);
+                tl.set(["#num-1", "#num-2", "#num-3"], { color: "#a0a0a5" }, s);
                 tl.set(
                     ["#label-1", "#label-2", "#label-3"],
-                    { color: "#333333" },
+                    { color: "#c7c7cc" },
                     s,
                 );
-                tl.set(`#circle-${num}`, { backgroundColor: "#1d6fd8" }, s);
+                tl.set(`#circle-${num}`, { backgroundColor: "#4091eb" }, s);
                 tl.set(`#num-${num}`, { color: "#ffffff" }, s);
-                tl.set(`#label-${num}`, { color: "#1d6fd8" }, s);
+                tl.set(`#label-${num}`, { color: "#4091eb" }, s);
                 tl.fromTo(
                     "#card",
                     { opacity: 0 },
